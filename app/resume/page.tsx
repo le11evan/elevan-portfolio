@@ -83,7 +83,20 @@ export default function ResumePage() {
             <div key={p.name} className="resume-item">
               <div className="resume-item-head">
                 <div>
-                  <span className="resume-item-title">{p.name}</span>
+                  <span className="resume-item-title">
+                    {p.link ? (
+                      <a
+                        href={p.link.startsWith("http") ? p.link : `https://${p.link}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="resume-link"
+                      >
+                        {p.name}
+                      </a>
+                    ) : (
+                      p.name
+                    )}
+                  </span>
                   <span className="resume-item-sep"> — </span>
                   <span className="resume-item-subtitle">{p.tagline}</span>
                 </div>
@@ -265,6 +278,17 @@ export default function ResumePage() {
           font-size: 15px;
           color: var(--color-fg);
         }
+        .resume-link {
+          color: inherit;
+          text-decoration: none;
+          border-bottom: 1px dotted color-mix(in srgb, var(--color-blue) 55%, transparent);
+          transition: color 0.15s ease, border-color 0.15s ease;
+        }
+        .resume-link:hover {
+          color: var(--color-blue);
+          border-bottom-color: var(--color-blue);
+          border-bottom-style: solid;
+        }
         .resume-item-sep { color: var(--color-muted); opacity: 0.6; }
         .resume-item-subtitle {
           font-family: var(--font-body);
@@ -358,6 +382,11 @@ export default function ResumePage() {
           .resume-item-dates { color: #555 !important; font-size: 8pt; }
           .resume-item-meta { color: #555 !important; font-size: 8pt; margin-top: 0; }
           .resume-item-meta a { color: #0057d1 !important; }
+          .resume-link {
+            color: #0057d1 !important;
+            border-bottom: 0 !important;
+            text-decoration: none !important;
+          }
           .resume-bullets { margin-top: 3pt !important; }
           .resume-bullets li {
             color: #111 !important;
