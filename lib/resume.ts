@@ -10,11 +10,10 @@ export const RESUME = {
   email: "Le11evan@gmail.com",
   phone: "949-689-2510",
   links: [
+    { label: "elevan-portfolio.vercel.app", href: "https://elevan-portfolio.vercel.app" },
     { label: "github.com/le11evan", href: "https://github.com/le11evan" },
     { label: "linkedin.com/in/le11evan", href: "https://linkedin.com/in/le11evan" },
     { label: "elevan-vzn.com", href: "https://elevan-vzn.com" },
-    // Portfolio link — uncomment + update once the live domain is set.
-    // { label: "evan-le.dev", href: "https://evan-le.dev" },
   ],
   summary:
     "Computer Science graduate (cum laude, CSUF 2023). Solo-operator of a 7-agent LLM trading platform shipping live trades. 100+ merged PRs through AI-to-AI code review. Background in elementary STEM instruction and operations adds range — I design data pipelines, train instructors, and explain either one clearly.",
