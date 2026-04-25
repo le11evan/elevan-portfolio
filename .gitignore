@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.env*
+!.env.example
+.DS_Store
+*.log
+.vercel
+.claude/
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Private — not for public repo
+/Docs/
+*.pdf
