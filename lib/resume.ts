@@ -16,7 +16,7 @@ export const RESUME = {
     { label: "elevan-vzn.com", href: "https://elevan-vzn.com" },
   ],
   summary:
-    "Computer Science graduate (cum laude, CSUF 2023). Solo-operator of a 7-agent LLM trading platform shipping live trades. 100+ merged PRs through AI-to-AI code review. Background in elementary STEM instruction and operations adds range — I design data pipelines, train instructors, and explain either one clearly.",
+    "Computer Science graduate (cum laude, CSUF 2023). Solo-operator of a 7-agent LLM trading platform shipping live trades. 100+ merged PRs through AI-to-AI code review. Background in elementary STEM instruction and operations adds range — I can ship code, run a classroom, and explain either one plainly.",
   skills: [
     {
       group: "AI & Model Training",
@@ -112,16 +112,6 @@ export const RESUME = {
       stack: "",
       bullets: [
         "Built a 10-module cloud-native dashboard (Tasks, Fitness, Diet, Finance, Journal, Goals, and more) with account creation and login, using AI-assisted pair programming (Claude Code, Codex). Used daily as my primary life-management tool.",
-      ],
-    },
-    {
-      name: "Hurrikane",
-      tagline: "Sugarcane juice brand (pre-launch)",
-      role: "",
-      link: "",
-      stack: "",
-      bullets: [
-        "Family-run beverage brand targeting Orange County farmers markets, summer 2026. Lead on brand, operations, and sourcing.",
       ],
     },
   ],

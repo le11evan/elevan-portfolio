@@ -346,7 +346,7 @@ export default function ResumePage() {
 
         /* ── Print styles (clean paper version, fits 1 page letter) ─── */
         @media print {
-          @page { margin: 0.4in; size: letter; }
+          @page { margin: 0.35in; size: letter; }
           html, body { background: #fff !important; color: #111 !important; }
           .grain-overlay { display: none !important; }
           header, footer, .resume-screen-only { display: none !important; }
@@ -357,46 +357,46 @@ export default function ResumePage() {
             border: 0 !important;
             padding: 0 !important;
             color: #111 !important;
-            font-size: 9.5pt;
-            line-height: 1.32;
+            font-size: 9pt;
+            line-height: 1.28;
             max-width: 100% !important;
           }
-          .resume-header { margin-bottom: 6pt !important; }
-          .resume-name { color: #111 !important; font-size: 19pt; }
-          .resume-contact { color: #333 !important; font-size: 8.5pt; margin-top: 4pt; }
+          .resume-header { margin-bottom: 4pt !important; }
+          .resume-name { color: #111 !important; font-size: 17pt; }
+          .resume-contact { color: #333 !important; font-size: 8pt; margin-top: 3pt; }
           .resume-contact a { color: #0057d1 !important; }
           .resume-contact-links { margin-top: 1pt; }
           .resume-contact-links a { color: #0057d1 !important; }
-          .resume-summary { color: #222 !important; font-size: 9.25pt; line-height: 1.35; margin-top: 6pt; }
-          .resume-rule { border-top-color: #ccc !important; margin: 7pt 0; }
-          .resume-h3 { color: #111 !important; font-size: 9pt; margin-bottom: 5pt; letter-spacing: 0.18em; }
-          .resume-skills { gap: 3pt !important; }
-          .resume-skill-row { grid-template-columns: 110pt 1fr !important; gap: 10pt !important; }
-          .resume-skill-row dt { color: #333 !important; font-size: 8pt; }
-          .resume-skill-row dd { color: #111 !important; font-size: 9pt; line-height: 1.32; }
-          .resume-item { margin-bottom: 6pt !important; }
+          .resume-summary { color: #222 !important; font-size: 8.75pt; line-height: 1.32; margin-top: 4pt; }
+          .resume-rule { border-top-color: #ccc !important; margin: 5pt 0; }
+          .resume-h3 { color: #111 !important; font-size: 8.5pt; margin-bottom: 3pt; letter-spacing: 0.18em; }
+          .resume-skills { gap: 2pt !important; }
+          .resume-skill-row { grid-template-columns: 100pt 1fr !important; gap: 8pt !important; }
+          .resume-skill-row dt { color: #333 !important; font-size: 7.5pt; }
+          .resume-skill-row dd { color: #111 !important; font-size: 8.5pt; line-height: 1.28; }
+          .resume-item { margin-bottom: 4pt !important; }
           .resume-item-title, .resume-item-subtitle { color: #111 !important; }
-          .resume-item-title { font-size: 10pt; }
-          .resume-item-subtitle { font-size: 9.5pt; }
+          .resume-item-title { font-size: 9.5pt; }
+          .resume-item-subtitle { font-size: 9pt; }
           .resume-item-sep { color: #666 !important; }
-          .resume-item-dates { color: #555 !important; font-size: 8pt; }
-          .resume-item-meta { color: #555 !important; font-size: 8pt; margin-top: 0; }
+          .resume-item-dates { color: #555 !important; font-size: 7.5pt; }
+          .resume-item-meta { color: #555 !important; font-size: 7.5pt; margin-top: 0; }
           .resume-item-meta a { color: #0057d1 !important; }
           .resume-link {
             color: #0057d1 !important;
             border-bottom: 0 !important;
             text-decoration: none !important;
           }
-          .resume-bullets { margin-top: 3pt !important; }
+          .resume-bullets { margin-top: 2pt !important; }
           .resume-bullets li {
             color: #111 !important;
-            font-size: 9pt;
-            line-height: 1.32;
-            margin-bottom: 1.5pt;
-            padding-left: 11pt;
+            font-size: 8.5pt;
+            line-height: 1.28;
+            margin-bottom: 1pt;
+            padding-left: 10pt;
           }
           .resume-bullets li::before { color: #0057d1 !important; }
-          .resume-edu { margin-bottom: 2pt; }
+          .resume-edu { margin-bottom: 1pt; }
           .resume-section, .resume-item { break-inside: avoid; }
         }
       `}</style>
