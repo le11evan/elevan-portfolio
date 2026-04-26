@@ -3,9 +3,10 @@ import Link from "next/link";
 const ROUTES = [
   { href: "/", label: "Home", num: "00" },
   { href: "/work", label: "Work", num: "01" },
-  { href: "/about", label: "About", num: "02" },
-  { href: "/resume", label: "Resume", num: "03" },
-  { href: "/contact", label: "Contact", num: "04" },
+  { href: "/notes", label: "Notes", num: "02" },
+  { href: "/about", label: "About", num: "03" },
+  { href: "/resume", label: "Resume", num: "04" },
+  { href: "/contact", label: "Contact", num: "05" },
 ];
 
 export default function Nav() {

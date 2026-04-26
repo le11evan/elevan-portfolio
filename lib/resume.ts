@@ -16,12 +16,12 @@ export const RESUME = {
     { label: "elevan-vzn.com", href: "https://elevan-vzn.com" },
   ],
   summary:
-    "Computer Science graduate (cum laude, CSUF 2023). Solo-operator of a 7-agent LLM trading platform shipping live trades. 100+ merged PRs through AI-to-AI code review. Background in elementary STEM instruction and operations adds range — I can ship code, run a classroom, and explain either one plainly.",
+    "Solo-operate elevan.vzn — a 7-agent LLM trading platform running live on Alpaca (115+ settled trades, 100+ adversarial-reviewed PRs from an external Claude agent team). CS grad (cum laude, CSUF 2023). Day job teaches engineering to elementary students across ~20 OC sites a year — the same 'translate technical to anyone' skill core to AI engineering and forward-deployed work.",
   skills: [
     {
-      group: "AI & Model Training",
+      group: "AI & Agent Engineering",
       items:
-        "Multi-agent orchestration (7-agent team), agentic learning pipelines, prompt engineering, RLHF workflows, model output evaluation, AI data annotation, image evaluation, loss-category tagging, tiered model selection (Opus / Sonnet / Haiku), Claude API, Claude Code, OpenAI Codex, MCP integrations",
+        "Multi-agent orchestration (7-agent production system), agent eval pipelines (12-category loss tagging, AI post-mortems, 6 pattern detectors), tool use / function calling, tiered model selection (Opus / Sonnet / Haiku), token-budget guardrails, prompt engineering, RLHF data annotation, Claude API, Claude Code, OpenAI Codex, MCP integrations",
     },
     {
       group: "Languages",
@@ -35,7 +35,7 @@ export const RESUME = {
     {
       group: "Systems & DevOps",
       items:
-        "Vercel, Oracle Cloud VPS, systemd, Unix-domain-socket IPC, kqueue file watching, priority-queue scheduling, token-budget tracking",
+        "Vercel, Oracle Cloud VPS, systemd, Unix-domain-socket IPC, kqueue file watching, priority-queue scheduling, observability via public trade ledger + Discord alerts",
     },
     {
       group: "Design & Media",
@@ -44,12 +44,12 @@ export const RESUME = {
   ],
   experience: [
     {
-      role: "AI Data Analyst (Contract)",
+      role: "AI Data Analyst (Contract) — Project Spectra",
       company: "Handshake AI",
       location: "Remote",
       dates: "2026",
       bullets: [
-        "Selected for Project Spectra. Evaluate AI-generated images for quality, accuracy, and content integrity using structured annotation frameworks, multi-step screening rubrics, and detailed evaluation criteria.",
+        "Contribute RLHF training data through structured annotation rubrics for image evaluation — quality, accuracy, and content-integrity scoring across multi-step screening criteria.",
       ],
     },
     {
@@ -79,40 +79,30 @@ export const RESUME = {
       dates: "Sep 2023 – Present",
       bullets: [
         "Teach robotics, coding, and engineering to 15–25 elementary students per session — ~20 sites a year, in-school and after-school programs across every Orange County district.",
-      ],
-    },
-    {
-      role: "Assistant Manager",
-      company: "Phans55 Bistro & Bar",
-      location: "Irvine, CA",
-      dates: "Jan 2023 – Jan 2024",
-      bullets: [
-        "Ran daily FOH / BOH coordination, staff training, payments, and customer service.",
+        "Translate technical concepts (algorithms, robotics, engineering) to non-technical, mixed-age audiences daily — directly transferable to forward-deployed and stakeholder-facing engineering roles.",
       ],
     },
   ],
   projects: [
     {
       name: "elevan.vzn",
-      tagline: "AI-powered quantitative trading signal platform",
+      tagline: "Live multi-agent LLM trading platform",
       role: "Founder & Full-Stack Engineer",
       link: "elevan-vzn.com",
-      stack: "Next.js, TypeScript, Prisma, Neon Postgres, Python, Oracle Cloud, Vercel",
+      stack: "Next.js, TypeScript, Prisma, Neon Postgres, Python, Oracle Cloud, Alpaca",
       bullets: [
-        "Solo-built a live 3-sector platform (options, sports, prediction markets). 115+ settled trades across 8 options strategies. Zero-to-production in ~8 weeks.",
-        "Engineered a 7-agent autonomous AI workforce: kqueue file watching, Unix-domain-socket IPC, priority-queue scheduling, 24-hour timeslot coverage, token-budget tracking.",
-        "Designed an agentic learning pipeline (loss tagging, AI post-mortems, 6 pattern detectors) and shipped 100+ merged PRs with CALLDUCK, an external adversarial 7-agent Claude team.",
+        "Engineered a 7-agent autonomous AI workforce — kqueue file watching, Unix-domain-socket IPC, priority-queue scheduling, 24-hour timeslot coverage, token-budget guardrails. Solo, end-to-end.",
+        "Designed an agentic-learning eval pipeline: every losing trade auto-tagged across 12 loss categories, AI post-mortem generated, 6 pattern detectors feed back into model selection — measurable cost / quality wins from tiered model routing (Opus / Sonnet / Haiku).",
+        "Shipped 100+ merged PRs through CALLDUCK — an external 7-agent adversarial Claude review team. Live on Alpaca: 115+ settled trades across 8 options strategies. Zero-to-prod in ~8 weeks.",
       ],
     },
     {
       name: "elevan.life",
-      tagline: "Personal productivity dashboard (daily driver)",
+      tagline: "10-module personal productivity dashboard — daily driver, ~90% built with Claude Code + Codex as a controlled experiment in agent-paired solo development.",
       role: "",
       link: "elevan-life.vercel.app",
       stack: "",
-      bullets: [
-        "Built a 10-module cloud-native dashboard (Tasks, Fitness, Diet, Finance, Journal, Goals, and more) with account creation and login, using AI-assisted pair programming (Claude Code, Codex). Used daily as my primary life-management tool.",
-      ],
+      bullets: [],
     },
   ],
   education: [

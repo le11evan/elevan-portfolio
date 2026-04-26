@@ -11,7 +11,7 @@ export default function ContactPage() {
   return (
     <>
       <section className="pt-4 md:pt-8">
-        <SectionMarker num="04" label="CONTACT · DIRECT" accent="var(--color-green)" />
+        <SectionMarker num="05" label="CONTACT · DIRECT" accent="var(--color-green)" />
         <h1
           className="font-display mt-6 text-[52px] font-black leading-[0.9] md:text-[112px]"
           style={{ color: "var(--color-fg)", letterSpacing: "-0.04em" }}
@@ -48,7 +48,7 @@ export default function ContactPage() {
       </section>
 
       <section className="mt-16">
-        <SectionMarker num="05" label="ELSEWHERE" accent="var(--color-gold)" />
+        <SectionMarker num="06" label="ELSEWHERE" accent="var(--color-gold)" />
         <div className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2">
           {SOCIALS.filter((s) => !s.href.startsWith("mailto")).map((s) => (
             <Link

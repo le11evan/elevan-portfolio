@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       {/* INTRO */}
       <section className="pt-4 md:pt-8">
-        <SectionMarker num="02" label="ABOUT · THE LONG VERSION" accent="var(--color-red)" />
+        <SectionMarker num="03" label="ABOUT · THE LONG VERSION" accent="var(--color-red)" />
         <h1
           className="font-display mt-6 text-[52px] font-black leading-[0.9] md:text-[96px]"
           style={{ color: "var(--color-fg)", letterSpacing: "-0.04em" }}

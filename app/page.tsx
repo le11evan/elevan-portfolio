@@ -3,13 +3,22 @@ import IdentitySwitcher from "@/components/identity-switcher";
 import SectionMarker from "@/components/section-marker";
 import ProjectCard from "@/components/project-card";
 import { PROJECTS } from "@/lib/data";
+import { NOTES } from "@/lib/notes";
 
 export default function Home() {
   return (
     <>
       {/* HERO */}
       <section className="relative pt-8 md:pt-16">
-        <SectionMarker num="00" label="INTRO" accent="var(--color-blue)" />
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <SectionMarker num="00" label="AI / AGENT ENGINEER" accent="var(--color-blue)" />
+          <span
+            className="font-mono text-[10px] caps"
+            style={{ color: "var(--color-green)", letterSpacing: "0.28em" }}
+          >
+            ● open to AI eng · forward-deployed · agent roles
+          </span>
+        </div>
         <div className="mt-6">
           <IdentitySwitcher />
         </div>
@@ -38,10 +47,42 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-          {PROJECTS.map((p) => (
-            <ProjectCard key={p.slug} project={p} />
-          ))}
+        <div className="mt-10 space-y-5">
+          {/* Flagship — full width */}
+          <ProjectCard project={PROJECTS[0]} />
+
+          {/* Secondary — slim card */}
+          <Link
+            href="/work"
+            className="card flex flex-col gap-4 p-5 transition-colors hover:border-[color:var(--color-fg)] sm:flex-row sm:items-center sm:justify-between sm:p-6"
+          >
+            <div>
+              <span
+                className="font-mono text-[10px] caps"
+                style={{ color: "var(--color-muted)", letterSpacing: "0.28em" }}
+              >
+                ● also building
+              </span>
+              <h3
+                className="font-display mt-2 text-[22px] font-bold leading-[1.05] md:text-[26px]"
+                style={{ color: "var(--color-fg)", letterSpacing: "-0.02em" }}
+              >
+                {PROJECTS[1].title}
+              </h3>
+              <p
+                className="font-mono mt-1 text-[11px] caps"
+                style={{ color: PROJECTS[1].accent }}
+              >
+                {PROJECTS[1].subtitle}
+              </p>
+            </div>
+            <span
+              className="font-mono shrink-0 text-[10px] caps link-underline"
+              style={{ color: "var(--color-fg)" }}
+            >
+              → case study
+            </span>
+          </Link>
         </div>
 
         <Link
@@ -53,10 +94,88 @@ export default function Home() {
         </Link>
       </section>
 
+      {/* NOTES */}
+      <section className="mt-28 md:mt-40">
+        <div className="neon-line mb-10" />
+        <div className="flex items-end justify-between gap-6">
+          <div>
+            <SectionMarker num="02" label="NOTES" accent="var(--color-red)" />
+            <h2
+              className="font-display mt-5 text-[40px] font-bold leading-[0.95] md:text-[64px]"
+              style={{ color: "var(--color-fg)", letterSpacing: "-0.03em" }}
+            >
+              Things I&apos;ve been{" "}
+              <span style={{ color: "var(--color-red)" }}>thinking through.</span>
+            </h2>
+          </div>
+          <Link
+            href="/notes"
+            className="font-mono hidden shrink-0 text-[10px] caps link-underline md:block"
+            style={{ color: "var(--color-fg)" }}
+          >
+            → all notes
+          </Link>
+        </div>
+
+        <div className="mt-10 space-y-4">
+          {NOTES.slice(0, 1).map((n) => (
+            <Link
+              key={n.slug}
+              href={`/notes/${n.slug}`}
+              className="card group flex flex-col gap-4 p-6 transition-colors hover:border-[color:var(--color-fg)] md:p-8"
+              style={{
+                borderColor: `color-mix(in srgb, ${n.accent} 25%, var(--color-border))`,
+              }}
+            >
+              <div className="flex flex-wrap items-center gap-4">
+                <span
+                  className="font-mono text-[10px] caps"
+                  style={{ color: n.accent, letterSpacing: "0.3em" }}
+                >
+                  ● latest · {n.tag}
+                </span>
+                <span
+                  className="font-mono text-[10px] caps"
+                  style={{ color: "var(--color-muted)", letterSpacing: "0.22em" }}
+                >
+                  {n.dateLabel} · {n.minutes} min read
+                </span>
+              </div>
+              <h3
+                className="font-display text-[26px] font-bold leading-[1.1] md:text-[34px]"
+                style={{ color: "var(--color-fg)", letterSpacing: "-0.025em" }}
+              >
+                {n.title}
+              </h3>
+              <p
+                className="max-w-[720px] text-[15px] leading-[1.6] md:text-[16px]"
+                style={{ color: "var(--color-muted)" }}
+              >
+                {n.dek}
+              </p>
+              <span
+                className="font-mono text-[10px] caps link-underline"
+                style={{ color: "var(--color-fg)", letterSpacing: "0.22em" }}
+              >
+                → read
+              </span>
+            </Link>
+          ))}
+        </div>
+
+        <Link
+          href="/notes"
+          className="font-mono mt-8 inline-block text-[10px] caps link-underline md:hidden"
+          style={{ color: "var(--color-fg)" }}
+        >
+          → all notes
+        </Link>
+      </section>
+
       {/* SOUNDS */}
       <section className="mt-28 md:mt-40">
         <div className="neon-line mb-10" />
-        <SectionMarker num="02" label="SOUNDS" accent="var(--color-red)" />
+        <SectionMarker num="03" label="SOUNDS" accent="var(--color-red)" />
         <div className="mt-6 grid grid-cols-1 gap-10 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div>
             <h2
@@ -110,7 +229,7 @@ export default function Home() {
       {/* ABOUT TEASER */}
       <section className="mt-28 md:mt-40">
         <div className="neon-line mb-10" />
-        <SectionMarker num="03" label="THE HUMAN" accent="var(--color-green)" />
+        <SectionMarker num="04" label="THE HUMAN" accent="var(--color-green)" />
         <div className="mt-6 grid grid-cols-1 gap-10 md:grid-cols-[2fr_1fr]">
           <div>
             <h2
@@ -205,7 +324,7 @@ export default function Home() {
       {/* CTA */}
       <section className="mt-28 md:mt-40">
         <div className="neon-line mb-10" />
-        <SectionMarker num="04" label="SIGNAL ME" accent="var(--color-blue)" />
+        <SectionMarker num="05" label="SIGNAL ME" accent="var(--color-blue)" />
         <div className="mt-6 flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
           <h2
             className="font-display text-[36px] font-bold leading-[1] md:text-[64px]"

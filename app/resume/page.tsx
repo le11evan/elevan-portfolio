@@ -60,21 +60,6 @@ export default function ResumePage() {
 
         <hr className="resume-rule" />
 
-        {/* Skills */}
-        <section className="resume-section">
-          <h3 className="resume-h3">Technical Skills</h3>
-          <dl className="resume-skills">
-            {RESUME.skills.map((s) => (
-              <div key={s.group} className="resume-skill-row">
-                <dt>{s.group}</dt>
-                <dd>{s.items}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-
-        <hr className="resume-rule" />
-
         {/* Projects */}
         <section className="resume-section">
           <h3 className="resume-h3">Projects</h3>
@@ -100,7 +85,7 @@ export default function ResumePage() {
                   <span className="resume-item-subtitle">{p.tagline}</span>
                 </div>
               </div>
-              {(p.role || p.link) && (
+              {(p.role || p.link || p.stack) && (
                 <div className="resume-item-meta">
                   {p.link && (
                     <a
@@ -123,13 +108,30 @@ export default function ResumePage() {
                   )}
                 </div>
               )}
-              <ul className="resume-bullets">
-                {p.bullets.map((b, i) => (
-                  <li key={i}>{b}</li>
-                ))}
-              </ul>
+              {p.bullets.length > 0 && (
+                <ul className="resume-bullets">
+                  {p.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
+        </section>
+
+        <hr className="resume-rule" />
+
+        {/* Skills */}
+        <section className="resume-section">
+          <h3 className="resume-h3">Technical Skills</h3>
+          <dl className="resume-skills">
+            {RESUME.skills.map((s) => (
+              <div key={s.group} className="resume-skill-row">
+                <dt>{s.group}</dt>
+                <dd>{s.items}</dd>
+              </div>
+            ))}
+          </dl>
         </section>
 
         <hr className="resume-rule" />
