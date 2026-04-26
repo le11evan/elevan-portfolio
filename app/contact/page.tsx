@@ -144,7 +144,7 @@ function ContactCard({
         ● {label}
       </div>
       <div
-        className="font-display mt-4 break-all text-[28px] font-bold leading-[1] transition-colors md:text-[36px]"
+        className="font-display mt-4 break-words text-[28px] font-bold leading-[1] transition-colors md:text-[36px]"
         style={{ color: "var(--color-fg)" }}
       >
         {value}

@@ -12,4 +12,5 @@ tsconfig.tsbuildinfo
 
 # Private — not for public repo
 /Docs/
+/Error-Screenshots/
 *.pdf

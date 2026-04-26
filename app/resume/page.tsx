@@ -37,17 +37,16 @@ export default function ResumePage() {
         {/* Header */}
         <header className="resume-header">
           <h2 className="resume-name">{RESUME.name}</h2>
-          <div className="resume-contact">
-            <span>{RESUME.location}</span>
-            <span className="resume-dot">·</span>
-            <a href={`mailto:${RESUME.email}`}>{RESUME.email}</a>
-            <span className="resume-dot">·</span>
-            <span>{RESUME.phone}</span>
+          <div className="resume-contact resume-contact-row">
+            <span className="resume-contact-item">{RESUME.location}</span>
+            <span className="resume-contact-item">
+              <a href={`mailto:${RESUME.email}`}>{RESUME.email}</a>
+            </span>
+            <span className="resume-contact-item">{RESUME.phone}</span>
           </div>
-          <div className="resume-contact resume-contact-links">
-            {RESUME.links.map((l, i) => (
-              <span key={l.href}>
-                {i > 0 && <span className="resume-dot">·</span>}
+          <div className="resume-contact resume-contact-row resume-contact-links">
+            {RESUME.links.map((l) => (
+              <span key={l.href} className="resume-contact-item">
                 <a href={l.href.startsWith("http") ? l.href : `https://${l.href}`}>
                   {l.label}
                 </a>
@@ -225,13 +224,30 @@ export default function ResumePage() {
           color: var(--color-muted);
           letter-spacing: 0.02em;
         }
+        .resume-contact-row {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+          row-gap: 4px;
+        }
+        .resume-contact-item {
+          white-space: nowrap;
+          position: relative;
+          padding-right: 22px;
+        }
+        .resume-contact-item:not(:last-child)::after {
+          content: "·";
+          position: absolute;
+          right: 8px;
+          opacity: 0.5;
+        }
         .resume-contact a {
           color: var(--color-gold);
           text-decoration: none;
         }
         .resume-contact a:hover { text-decoration: underline; }
         .resume-contact-links a { color: var(--color-blue); }
-        .resume-dot { opacity: 0.5; margin: 0 8px; }
+        .resume-dot { opacity: 0.5; }
         .resume-summary {
           margin-top: 14px;
           font-size: 14.5px;
@@ -309,7 +325,11 @@ export default function ResumePage() {
           color: var(--color-muted);
           margin-top: 2px;
         }
-        .resume-item-meta a { color: var(--color-blue); text-decoration: none; }
+        .resume-item-meta a {
+          color: var(--color-blue);
+          text-decoration: none;
+          white-space: nowrap;
+        }
         .resume-item-meta a:hover { text-decoration: underline; }
         .resume-bullets {
           list-style: none;
